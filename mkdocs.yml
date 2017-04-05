@@ -2,5 +2,8 @@ site_name: NC3Rs R Tutorial
 pages:
     - Home: index.md
     - Introduction: intro.md
-    - Reading Data: data_from_files.md
+    - Reading data from files: data_from_files.md
+    - Working with data: processing_data.md
+    - Scripting: scripting.md
+    - Basic Graphing: basic_graphing.md
 theme: readthedocs
