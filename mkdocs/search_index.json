@@ -2,27 +2,27 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nAcknowledgments\n\n\nContent of this tutorial built upon the following previous documents:\n\n\n\n\nNIH - Introduction to R for Non-programmers\n\n\nJim Tyson - First course in R\n\n\nAltaf Ali - Data Visualization in R with ggplot2\n\n\nHarvard University - Introduction to R Graphics with ggplot2\n\n\n\n\n\n\nThis work is licensed under a \nCreative Commons Attribution-ShareAlike 4.0 International License\n.", 
+            "text": "NC3Rs David Sainsbury Fellows Meeting: R Tutorial\n\n\nThis tutorial provides a basic introduction to the \nR\n statistical modelling and graphing environment.\nThe basic goal is to convince you that scripting and analysis in a programming language like \nR\n is vastly superior to using Excel.\nNo assumptions are made about previous programming experience.\n\n\nLearning objectives\n\n\nAfter completing this tutorial you should:\n\n\n\n\nbe familiar with basic \nR\n commands and \nR Studio\n\n\nable to import, explore and manipulate your data in \nR\n\n\nknow how to get help and find documentation\n\n\nbe capable of creating and modifying simple \nR\n scripts\n\n\nseen how to create a beautiful plot using \nggplot2\n\n\n\n\nPrerequistites\n\n\nTo follow this course you need to have installed \nR\n and \nR Studio\n on your laptop.\nIf you haven't already done so they can be downloaded (for free) from the links below:\n\n\n\n\nR\n\n\nR Studio\n\n\n\n\nAcknowledgments\n\n\nContent of this tutorial built upon the following previous documents:\n\n\n\n\nNIH - Introduction to R for Non-programmers\n\n\nJim Tyson - First course in R\n\n\nAltaf Ali - Data Visualization in R with ggplot2\n\n\nHarvard University - Introduction to R Graphics with ggplot2", 
             "title": "Home"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/#nc3rs-david-sainsbury-fellows-meeting-r-tutorial", 
+            "text": "This tutorial provides a basic introduction to the  R  statistical modelling and graphing environment.\nThe basic goal is to convince you that scripting and analysis in a programming language like  R  is vastly superior to using Excel.\nNo assumptions are made about previous programming experience.", 
+            "title": "NC3Rs David Sainsbury Fellows Meeting: R Tutorial"
         }, 
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
+            "location": "/#learning-objectives", 
+            "text": "After completing this tutorial you should:   be familiar with basic  R  commands and  R Studio  able to import, explore and manipulate your data in  R  know how to get help and find documentation  be capable of creating and modifying simple  R  scripts  seen how to create a beautiful plot using  ggplot2", 
+            "title": "Learning objectives"
         }, 
         {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/#prerequistites", 
+            "text": "To follow this course you need to have installed  R  and  R Studio  on your laptop.\nIf you haven't already done so they can be downloaded (for free) from the links below:   R  R Studio", 
+            "title": "Prerequistites"
         }, 
         {
             "location": "/#acknowledgments", 
-            "text": "Content of this tutorial built upon the following previous documents:   NIH - Introduction to R for Non-programmers  Jim Tyson - First course in R  Altaf Ali - Data Visualization in R with ggplot2  Harvard University - Introduction to R Graphics with ggplot2    This work is licensed under a  Creative Commons Attribution-ShareAlike 4.0 International License .", 
+            "text": "Content of this tutorial built upon the following previous documents:   NIH - Introduction to R for Non-programmers  Jim Tyson - First course in R  Altaf Ali - Data Visualization in R with ggplot2  Harvard University - Introduction to R Graphics with ggplot2", 
             "title": "Acknowledgments"
         }, 
         {
