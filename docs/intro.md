@@ -27,6 +27,7 @@ As in many programming languages, multiply is `*` and divide is `/`.
 ### Division
 
 `> 1 / 2`
+
 >[1] 0.5
 
 ### Multiplication
