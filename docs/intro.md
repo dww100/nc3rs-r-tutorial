@@ -60,4 +60,3 @@ To get more information on how to use a function you can use `?`, for example:
 
 You will then see more information in the **Help** tab on the function in the bottom right pane in R Studio.
 This is a tab in the pane which initially held the **Files** - this can easily be recovered from tab menu there.
-
