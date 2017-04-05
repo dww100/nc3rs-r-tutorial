@@ -1,20 +1,26 @@
-# Welcome to MkDocs
+# NC3Rs David Sainsbury Fellows Meeting: R Tutorial
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+This tutorial provides a basic introduction to the *R* statistical modelling and graphing environment.
+The basic goal is to convince you that scripting and analysis in a programming language like *R* is vastly superior to using Excel.
+No assumptions are made about previous programming experience.
 
-## Commands
+## Learning objectives
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+After completing this tutorial you should:
 
-## Project layout
+* be familiar with basic *R* commands and *R Studio*
+* able to import, explore and manipulate your data in *R*
+* know how to get help and find documentation
+* be capable of creating and modifying simple *R* scripts
+* seen how to create a beautiful plot using *ggplot2*
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Prerequistites
+
+To follow this course you need to have installed *R* and *R Studio* on your laptop.
+If you haven't already done so they can be downloaded (for free) from the links below:
+
+* [R](https://www.r-project.org/)
+* [R Studio](https://www.rstudio.com/products/rstudio/download/)
 
 ## Acknowledgments
 
@@ -24,8 +30,4 @@ Content of this tutorial built upon the following previous documents:
 * [Jim Tyson - First course in R](https://jimbotyson.github.io/rcourse/index.html)
 * [Altaf Ali - Data Visualization in R with ggplot2](https://altaf-ali.github.io/ggplot_tutorial/)
 * [Harvard University - Introduction to R Graphics with ggplot2](http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html)
-
-![CC BY-SA](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
-
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
