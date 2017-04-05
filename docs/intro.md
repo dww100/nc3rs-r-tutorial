@@ -32,7 +32,7 @@ As in many programming languages, multiply is `*` and divide is `/`.
 
 ### Multiplication
 
-`> 2 * 2\\``[1] 4`
+`> 2 * 2\n [1] 4`
 
 ## Keeping the results of calculations
 
