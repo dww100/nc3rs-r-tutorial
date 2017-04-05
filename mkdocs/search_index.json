@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nAcknowledgments\n\n\nContent of this tutorial built upon the following previous documents:\n\n\n\n\nNIH - Introduction to R for Non-programmers\n\n\nJim Tyson - First course in R\n\n\nAltaf Ali - Data Visualization in R with ggplot2\n\n\n[Harvard University - Introduction to R Graphics with ggplot2]http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html\n\n\n\n\n\nThis work is licensed under a \nCreative Commons Attribution-ShareAlike 4.0 International License\n.", 
+            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nAcknowledgments\n\n\nContent of this tutorial built upon the following previous documents:\n\n\n\n\nNIH - Introduction to R for Non-programmers\n\n\nJim Tyson - First course in R\n\n\nAltaf Ali - Data Visualization in R with ggplot2\n\n\nHarvard University - Introduction to R Graphics with ggplot2\n\n\n\n\n\n\nThis work is licensed under a \nCreative Commons Attribution-ShareAlike 4.0 International License\n.", 
             "title": "Home"
         }, 
         {
@@ -22,7 +22,7 @@
         }, 
         {
             "location": "/#acknowledgments", 
-            "text": "Content of this tutorial built upon the following previous documents:   NIH - Introduction to R for Non-programmers  Jim Tyson - First course in R  Altaf Ali - Data Visualization in R with ggplot2  [Harvard University - Introduction to R Graphics with ggplot2]http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html   \nThis work is licensed under a  Creative Commons Attribution-ShareAlike 4.0 International License .", 
+            "text": "Content of this tutorial built upon the following previous documents:   NIH - Introduction to R for Non-programmers  Jim Tyson - First course in R  Altaf Ali - Data Visualization in R with ggplot2  Harvard University - Introduction to R Graphics with ggplot2    This work is licensed under a  Creative Commons Attribution-ShareAlike 4.0 International License .", 
             "title": "Acknowledgments"
         }, 
         {
