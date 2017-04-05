@@ -1,4 +1,7 @@
 site_name: NC3Rs R Tutorial
+site_description: An introduction to R - initially presented to the NC3Rs fellows in 2017
+site_author: David W. Wright
+
 pages:
     - Home: index.md
     - Introduction: intro.md
@@ -6,4 +9,8 @@ pages:
     - Working with data: processing_data.md
     - Scripting: scripting.md
     - Basic Graphing: basic_graphing.md
+
 theme: readthedocs
+
+copyright: This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)
+
