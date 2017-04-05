@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Scripting - NC3Rs R Tutorial</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Scripting";
+    var mkdocs_page_input_path = "scripting.md";
+    var mkdocs_page_url = "/scripting/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> NC3Rs R Tutorial</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../intro/">Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../data_from_files/">Reading data from files</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../processing_data/">Working with data</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Scripting</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#scripting">Scripting</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#creating-a-script-in-r-studio">Creating a script in R Studio</a></li>
+        
+            <li><a class="toctree-l3" href="#sourcing-the-script">Sourcing the script</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../basic_graphing/">Basic Graphing</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">NC3Rs R Tutorial</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Scripting</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="scripting">Scripting</h1>
+<p>A key to making your science reproducible is making the steps involved in your analysis available to others (and indeed your future self).
+A script is nothing more complicated that a file containing all of the commands that you want to run on your data which can be executed again.</p>
+<p>The fact that you have recorded your steps means that not only can you reproduce what you did in the past but quickly re-apply the same steps to a new dataset.</p>
+<h2 id="creating-a-script-in-r-studio">Creating a script in R Studio</h2>
+<p>Open a new file from the menu by selecting <em>File</em> -&gt; <em>New File</em> -&gt; <em>R Script</em> (or use the keyboard shortcut <em>Ctrl</em> + <em>Shift</em> + <em>N</em>).
+An empty file will appear in the pane above the <strong>Console</strong>.</p>
+<p>Write the commands we have already used to load the original titanic data and remove lines with no values provided for the passengers <em>Age</em> and then save a new file into this pane.
+You can provide information on what the lines do using comments.
+Comments are lines beginning with <code>#</code> which are ignored by <em>R</em> but can be read by people looking at your script.
+Your scripts should look something like:</p>
+<pre><code># Load the original data
+train &lt;- read.csv('titanic-train.csv')
+
+# Remove rows with no Age value in original data
+has_age &lt;- train[!is.na(train$Age), ]
+
+# Save data with valid Ages
+write.csv(has_age, file='validated.csv', row.names=FALSE)
+</code></pre>
+
+<p>Save this as a file using the menu selection <em>File</em> -&gt; <em>Save</em> (or the shortcut <em>Ctrl</em> + <em>S</em>).
+Call the file 'remove-nas.R', as the standard extension for an <em>R</em> script is '.R'.</p>
+<h2 id="sourcing-the-script">Sourcing the script</h2>
+<p>In order that we can be sure our script correctly loads and edits the data we need to remove the version of the variables we have created previously.
+Use the menu option <em>Session</em> -&gt; <em>Clear Workspace</em> to do this.</p>
+<p>Now we can execute the script.
+There are several options of how to do this, from the main menu select <em>Code</em> -&gt; <em>Source</em>, the <em>Source</em> button on the script pane or use the keyboard shortcut <em>Ctrl</em> + <em>Shift</em> + <em>S</em>.</p>
+<p>Once run you should see <code>train</code> and <code>has_age</code> in the <strong>Data</strong> section of the <strong>Environment</strong> pane.
+Check that these contain the data as expected (perhaps also look in the 'validated.csv' file).</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../basic_graphing/" class="btn btn-neutral float-right" title="Basic Graphing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../processing_data/" class="btn btn-neutral" title="Working with data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../processing_data/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../basic_graphing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

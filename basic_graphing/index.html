@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Basic Graphing - NC3Rs R Tutorial</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Basic Graphing";
+    var mkdocs_page_input_path = "basic_graphing.md";
+    var mkdocs_page_url = "/basic_graphing/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> NC3Rs R Tutorial</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../intro/">Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../data_from_files/">Reading data from files</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../processing_data/">Working with data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../scripting/">Scripting</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Basic Graphing</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#base-graphing">Base Graphing</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#scatter-plot">Scatter plot</a></li>
+        
+            <li><a class="toctree-l3" href="#histogram">Histogram</a></li>
+        
+            <li><a class="toctree-l3" href="#box-plot">Box plot</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">NC3Rs R Tutorial</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Basic Graphing</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="base-graphing">Base Graphing</h1>
+<p><em>R</em> has many graphing options.
+Here we introduce those available without any libraries, this is known as base graphing.
+In this introduction we will only cover how to make quick plots using these functions but they are in fact very flexible and can easily be made publication quality.</p>
+<h2 id="scatter-plot">Scatter plot</h2>
+<p>The simplest plot available in base <em>R</em> graphing is the scatter plot.
+This is created using the command:</p>
+<p><code>&gt; plot(has_age$Age, has_age$Fare)</code></p>
+<p>This command will create the plot below (showing pretty much no corellation).</p>
+<p><img alt="" src="../images/basic-scatter-initial.png" /></p>
+<p>There are many options to alter the appearance of the produced graph that can be passed to the <code>plot</code> function.
+Some of the most common are:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col</td>
+<td>Colour</td>
+</tr>
+<tr>
+<td>lwd</td>
+<td>Line width</td>
+</tr>
+<tr>
+<td>xlab</td>
+<td>X-axis label</td>
+</tr>
+<tr>
+<td>ylab</td>
+<td>Y-axis label</td>
+</tr>
+<tr>
+<td>main</td>
+<td>Main plot title</td>
+</tr>
+</tbody>
+</table>
+<p>The help for plot is less straight forward than usual, more helpful for information on these parameters is available in the <em>par</em> and <em>plot.default</em> help files.
+An example of using them is below:</p>
+<pre><code>plot(has_age$Age, has_age$Fare,
+     col = 'red',
+     lwd = 2,
+     xlab = 'Age',
+     ylab = 'Fare',
+     main = 'Fare vs Age on the Titanic'
+     )
+</code></pre>
+
+<p><img alt="" src="../images/basic-scatter-update.png" /></p>
+<h3 id="challenge">Challenge</h3>
+<p>Look up the functions <code>lm</code> and <code>abline</code> in the help and see if you can add a regression line to the plot to get something like this:</p>
+<p><img alt="" src="../images/basic-scatter-final.png" /></p>
+<p>Now we can be even more certain there is not trend ;)</p>
+<p><a href="../example-scripts/basic_scatter.R">Example answer</a></p>
+<h2 id="histogram">Histogram</h2>
+<p>Another simple plot that base graphics handles simply is the histogram.
+This is created using the <code>hist</code> command:</p>
+<p><code>&gt; hist(has_age$Age, xlab ='Age')</code></p>
+<p><img alt="" src="../images/basic-histogram.png" /></p>
+<h2 id="box-plot">Box plot</h2>
+<p>A slightly more complicated graph is the box plot.</p>
+<p><code>&gt; boxplot(has_age$Fare ~ has_age$Survived, xlab='Survived?', ylab='Fare')</code></p>
+<p><img alt="" src="../images/basic-boxplot.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../scripting/" class="btn btn-neutral" title="Scripting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../scripting/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

@@ -25,4 +25,28 @@
     </url>
     
 
+    
+    <url>
+     <loc>/processing_data/</loc>
+     <lastmod>2017-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/scripting/</loc>
+     <lastmod>2017-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/basic_graphing/</loc>
+     <lastmod>2017-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
 </urlset>

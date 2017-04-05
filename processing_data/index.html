@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Working with data - NC3Rs R Tutorial</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Working with data";
+    var mkdocs_page_input_path = "processing_data.md";
+    var mkdocs_page_url = "/processing_data/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> NC3Rs R Tutorial</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../intro/">Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../data_from_files/">Reading data from files</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Working with data</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#processing-data">Processing data</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#subsetting">Subsetting</a></li>
+        
+            <li><a class="toctree-l3" href="#dealing-with-nas">Dealing with NAs</a></li>
+        
+            <li><a class="toctree-l3" href="#saving-processed-data">Saving processed data</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../scripting/">Scripting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../basic_graphing/">Basic Graphing</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">NC3Rs R Tutorial</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Working with data</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="processing-data">Processing data</h1>
+<h2 id="subsetting">Subsetting</h2>
+<p><code>&gt; females &lt;- subset(train, Sex == "female")</code></p>
+<p>Note that we use <code>==</code> here as we want an equality (<code>=</code> is used for assignment).
+We can also use other comparisons, the full set of options is:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>less than or equal to</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>greater than or equal to</td>
+</tr>
+<tr>
+<td>==</td>
+<td>exactly equal to</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>not equal to</td>
+</tr>
+</tbody>
+</table>
+<p>Select data for passengers who are not in first class with:</p>
+<p><code>&gt; commoners &lt;- subset(train, Pclass &gt; 1)</code></p>
+<p>You can combine multiple filters using the logical operators <code>&amp;</code> for AND and <code>|</code> for OR:</p>
+<p><code>&gt; female_commoners &lt;- subset(train, Pclass &gt; 1 &amp; Sex == "female")</code></p>
+<p>Sometimes it is more useful to refer to specific rows, columns, or both using the <code>[]</code> notation.
+<em>R</em> interprets numbers within square brackets as [row, column].
+So for example <code>train[1,2]</code> would return <code>0</code> as Mr. Owen Harris Braund (the first passenger in our table) sadly did not survive (the second column is <em>Survived</em>).</p>
+<p>We can select a value using just rows, just columns, or both, using column/row numbers.
+We can also ask for a set of rows or columns, referred to as a
+slice, using <code>:</code>.
+For example to get all columns for the first 5 passengers (rows) use:</p>
+<p><code>&gt; train[1:5, ]</code></p>
+<p>To get the first two columns for all passengers:</p>
+<p><code>&gt; train[, 1:2]</code></p>
+<p>In these examples a blank entry for column or row selects all entries.
+If we want to exclude a line we could use, for example if we believe Mr. Owen Harris Braund to have lied about his age, we can use a negative value:</p>
+<p><code>&gt; no_braund &lt;- train[-1,]</code></p>
+<p>You can obviously combine selections of both rows and columns:</p>
+<p><code>&gt; train[-1, 1:2]</code></p>
+<p>This command would select the first two columns for everyone but the scandalous liar Braund.</p>
+<h2 id="dealing-with-nas">Dealing with NAs</h2>
+<p>We have already seen that the <em>Age</em> column in our data contains many <em>NA</em> values.
+This can have an impact on calculations we perform on the data.
+For example if we try to calculate the average age of passengers:</p>
+<pre><code>&gt; mean(train$Age)
+
+[1] NA
+</code></pre>
+
+<p>We can get a valid result if we remove all the <em>NA</em> values using:</p>
+<pre><code>&gt; mean(train$Age, na.rm=TRUE)
+
+[1] 29.69912
+</code></pre>
+
+<p>Rather than type this in every time we want to perform a calculation with the <em>Age</em>, it would be better to create a copy of the dataset but only including records with valid <em>Age</em> values.
+This can be done by using the following command:</p>
+<p><code>&gt; has_age &lt;- train[!is.na(train$Age), ]</code></p>
+<p>This uses the <code>is.na</code> function on the <em>Age</em> column to create a filter that only selects the <em>NA</em> entries.
+The <code>!</code> works as a logical NOT - we don't want to keep these <em>NA</em> entries after all.
+This filter can then be used in the same way as we previously used ranges like <code>1:2</code> to select only the rows we want to keep.</p>
+<p>There is a handy function that removes any rows with <em>NA</em> entries:</p>
+<p><code>&gt; no_na &lt;- na.omit(train)</code></p>
+<p>Be careful when you use if however as it will remove rows even if the <em>NA</em> is in a column that you don't wish to process.</p>
+<h2 id="saving-processed-data">Saving processed data</h2>
+<p>Now we have made changes to our data we will probably want to keep them available for future analysis sessions.
+To save a CSV file we can use the <code>write.csv</code> command, thus:</p>
+<p><code>&gt; write.csv(has_age, file='validated.csv')</code></p>
+<p>Let's load up the file we saved using:</p>
+<p><code>&gt; validated &lt;- read.csv('validated.csv')</code></p>
+<p>Inspect <code>validated</code> and you will see we have a new and unwanted column <em>X</em>.
+What has happened is that by default <em>R</em> saves a name for each row (we first encountered these when we examined the input data).
+To prevent this use:</p>
+<p><code>&gt; write.csv(has_age, file='validated.csv', row.names=FALSE)</code></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../scripting/" class="btn btn-neutral float-right" title="Scripting">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../data_from_files/" class="btn btn-neutral" title="Reading data from files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../data_from_files/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../scripting/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
