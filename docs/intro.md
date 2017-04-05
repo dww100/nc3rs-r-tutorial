@@ -51,7 +51,7 @@ You will also see that `my_result` has been added to the **Values** section of t
 
 ## Getting help
 
-We have just used out first *R* function - `print`.
+We have just used our first *R* function - `print`.
 Functions take input surrounded by brackets.
 
 To get more information on how to use a function you can use `?`, for example:
