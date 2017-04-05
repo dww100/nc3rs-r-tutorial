@@ -2,3 +2,4 @@ site_name: NC3Rs R Tutorial
 pages:
     - Home: index.md
     - Introduction: intro.md
+theme: readthedocs
