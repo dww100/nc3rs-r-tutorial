@@ -67,17 +67,13 @@
     <a class="current" href="./">Working with data</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#processing-data">Processing data</a></li>
+    <li class="toctree-l2"><a href="#subsetting">Subsetting</a></li>
     
-        <ul>
-        
-            <li><a class="toctree-l3" href="#subsetting">Subsetting</a></li>
-        
-            <li><a class="toctree-l3" href="#dealing-with-nas">Dealing with NAs</a></li>
-        
-            <li><a class="toctree-l3" href="#saving-processed-data">Saving processed data</a></li>
-        
-        </ul>
+
+    <li class="toctree-l2"><a href="#dealing-with-nas">Dealing with NAs</a></li>
+    
+
+    <li class="toctree-l2"><a href="#saving-processed-data">Saving processed data</a></li>
     
 
     </ul>
@@ -125,8 +121,12 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="processing-data">Processing data</h1>
+                <p>In many situations we don't want or need to work with all the data but only a subset of the information.
+<em>R</em> provides several ways to access only parts of the data you have read in.</p>
 <h2 id="subsetting">Subsetting</h2>
+<p>Perhaps the most common need is to filter your dataset to look at only that part that meets some criteria.
+In <em>R</em> this is most simply done using the <code>subset</code> function.
+Let's look at just the female passengers:</p>
 <p><code>&gt; females &lt;- subset(train, Sex == "female")</code></p>
 <p>Note that we use <code>==</code> here as we want an equality (<code>=</code> is used for assignment).
 We can also use other comparisons, the full set of options is:</p>
