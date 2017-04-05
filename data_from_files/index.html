@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Reading Data - NC3Rs R Tutorial</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Reading Data";
+    var mkdocs_page_input_path = "data_from_files.md";
+    var mkdocs_page_url = "/data_from_files/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> NC3Rs R Tutorial</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../intro/">Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Reading Data</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#getting-data-from-a-file">Getting data from a file</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#working-directory">Working directory</a></li>
+        
+            <li><a class="toctree-l3" href="#reading-a-file">Reading a file</a></li>
+        
+            <li><a class="toctree-l3" href="#examining-the-data">Examining the data</a></li>
+        
+            <li><a class="toctree-l3" href="#challenge-reading-a-tab-separated-file">Challenge - reading a tab separated file</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">NC3Rs R Tutorial</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Reading Data</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="getting-data-from-a-file">Getting data from a file</h1>
+<p>In order to work on real data the first thing we need to learn is how to read from files.</p>
+<h2 id="working-directory">Working directory</h2>
+<p>The working directory is the where <em>R</em> looks when we give it a file name, and where it will save things when we do that.</p>
+<p>Let's see what the current working directory is:</p>
+<p><code>&gt; cwd()</code></p>
+<p>In OS X or Linux the result should look like:</p>
+<p><code>[1] "/home/your_username/"</code></p>
+<p>On Windows more like:</p>
+<p><code>[1] "C:\Users\your_username"</code></p>
+<p>It is a good idea to use a separate directory for all of your projects.
+To change the working directory you can either use the command <code>setwd</code> or the <strong>Files</strong> tab of the bottom right pane in R Studio.</p>
+<p>To do the latter, navigate to the folder you want to use for this tutorial (you can create a new one using the <em>New Folder</em> option if you wish).
+Then go to the <em>More</em> option and select <em>Set As Working Directory</em>. You will see the <code>setwd</code> command used appears in the <strong>Console</strong>.</p>
+<h2 id="reading-a-file">Reading a file</h2>
+<p>Download the file <a href="../data/titanic-train.csv">titanic-train.csv</a> and save it into your working directory.
+This data was the training set for the <a href="https://www.kaggle.com/c/titanic/data">Kaggle Titanic challenge</a>.</p>
+<p><code>&gt; train &lt;- read.csv('titanic-train.csv')</code></p>
+<p>You should now see an entry for <code>train</code> in the <strong>Environment</strong> pane under the <strong>Data</strong> heading.
+Click on this line and a new pane will appear above the <strong>Console</strong> showing the contents of the <code>train</code> variable as a table, something like this:</p>
+<p><img alt="Titanic Kaggle training dataset in R Studio" src="../images/titanic-train-data.png" /></p>
+<h2 id="examining-the-data">Examining the data</h2>
+<p>You can use the commands <code>head</code> and <code>tail</code> to view the first or last six lines of the data:</p>
+<p><code>&gt; head(train)</code></p>
+<p><img alt="First lines of Titanic Kaggle training dataset" src="../images/head-titanic-train.png" /></p>
+<p>Notice how when more columns are provided in the data than there is space to show the rows are split and referenced using an index/row name - the number before the data on each line.</p>
+<p>Try using the help to find out how to show a different number of lines.</p>
+<p>The <code>names</code> command lists all of the columns in the data:</p>
+<pre><code>&gt; names(train)
+
+[1] &quot;PassengerId&quot; &quot;Survived&quot;    &quot;Pclass&quot;      &quot;Name&quot;        &quot;Sex&quot;         &quot;Age&quot;         &quot;SibSp&quot;      `
+[8] &quot;Parch&quot;     &quot;Ticket&quot;      &quot;Fare&quot;        &quot;Cabin&quot;       &quot;Embarked&quot;
+</code></pre>
+
+<p>A quick overview of the data can be obtained using <code>summary</code>:</p>
+<p><code>&gt; summary(trains)</code></p>
+<p><img alt="Summary of Titanic Kaggle training dataset" src="../images/titanic-train-summary.png" /></p>
+<p>A few things can be seen very easily in this summary - for example there are a lot of <em>NA</em>s in the Age column (177 in fact).
+In this case this isn't an actual NA in the input file, <em>R</em> has recognized a blank line in a numerical column and replaced it with <em>NA</em>.</p>
+<p>To access all values from a particular column we use the <code>$</code> syntax.
+To see all the values from the <em>Age</em> column use:</p>
+<p><code>&gt; train$Age</code></p>
+<h2 id="challenge-reading-a-tab-separated-file">Challenge - reading a tab separated file</h2>
+<p>Download the file <a href="../data/titanic-gendered.csv">titanic-gendered.csv</a>.
+Try to load it using <code>read.csv</code> (remember to copy or move it to your working directory).
+Do the columns produced look sensible?
+Try using <code>?read.csv</code> to get help to read this file correctly.</p>
+<p>You will need to know that 'whitespace' characters are often encoded using what are called escape characters.
+For example, in <em>R</em> the escape character is <code>\</code>.
+Tab is encoded as <code>\t</code>.</p>
+<p><a href="">Next</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../intro/" class="btn btn-neutral" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../intro/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
