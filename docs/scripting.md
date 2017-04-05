@@ -39,5 +39,3 @@ There are several options of how to do this, from the main menu select *Code* ->
 
 Once run you should see `train` and `has_age` in the **Data** section of the **Environment** pane.
 Check that these contain the data as expected (perhaps also look in the 'validated.csv' file).
-
-[Next]()

@@ -103,5 +103,3 @@ What has happened is that by default *R* saves a name for each row (we first enc
 To prevent this use:
 
 `> write.csv(has_age, file='validated.csv', row.names=FALSE)`
-
-[Next]()

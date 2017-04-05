@@ -67,5 +67,3 @@ A slightly more complicated graph is the box plot.
 `> boxplot(has_age$Fare ~ has_age$Survived, xlab='Survived?', ylab='Fare')`
 
 ![](images/basic-boxplot.png)
-
-[Next]()

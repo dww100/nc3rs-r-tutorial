@@ -81,5 +81,3 @@ Try using `?read.csv` to get help to read this file correctly.
 You will need to know that 'whitespace' characters are often encoded using what are called escape characters.
 For example, in *R* the escape character is `\`.
 Tab is encoded as `\t`.
-
-[Next]()
