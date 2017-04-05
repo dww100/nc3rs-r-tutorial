@@ -1,5 +1,3 @@
-# Scripting
-
 A key to making your science reproducible is making the steps involved in your analysis available to others (and indeed your future self).
 A script is nothing more complicated that a file containing all of the commands that you want to run on your data which can be executed again.
 
