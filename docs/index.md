@@ -25,7 +25,7 @@ Content of this tutorial built upon the following previous documents:
 * [Altaf Ali - Data Visualization in R with ggplot2](https://altaf-ali.github.io/ggplot_tutorial/)
 * [Harvard University - Introduction to R Graphics with ggplot2](http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html)
 
-![CC BY-SA](http://creativecommons.org/licenses/by-sa/4.0/)
+![CC BY-SA](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
