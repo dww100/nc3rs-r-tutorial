@@ -1,5 +1,3 @@
-# Base Graphing
-
 *R* has many graphing options.
 Here we introduce those available without any libraries, this is known as base graphing.
 In this introduction we will only cover how to make quick plots using these functions but they are in fact very flexible and can easily be made publication quality.
