@@ -19,22 +19,25 @@ As in many programming languages, multiply is `*` and divide is `/`.
 
 ### Addition
 
-```
+```R
 > 1 + 2
+
 [1] 3
 ```
 
 ### Division
 
-```
+```R
 > 1 / 2
+
 >[1] 0.5
 ```
 
 ### Multiplication
 
-```
+```R
 > 2 * 2
+
 [1] 4
 ```
 
