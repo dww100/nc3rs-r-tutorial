@@ -1,8 +1,12 @@
-# Processing data
+
+In many situations we don't want or need to work with all the data but only a subset of the information.
+*R* provides several ways to access only parts of the data you have read in.
 
 ## Subsetting
 
-
+Perhaps the most common need is to filter your dataset to look at only that part that meets some criteria.
+In *R* this is most simply done using the `subset` function.
+Let's look at just the female passengers:
 
 `> females <- subset(train, Sex == "female")`
 

@@ -1,5 +1,3 @@
-# Getting data from a file
-
 In order to work on real data the first thing we need to learn is how to read from files.
 
 ## Working directory
