@@ -18,9 +18,10 @@ As in many programming languages, multiply is `*` and divide is `/`.
 
 
 ### Addition
-`> 1 + 2`
-
-`[1] 3`
+```
+> 1 + 2
+[1] 3
+```
 
 ### Division
 `> 1 / 2`
