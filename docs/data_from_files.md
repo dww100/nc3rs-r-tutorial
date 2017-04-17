@@ -2,7 +2,7 @@ In order to work on real data the first thing we need to learn is how to read fr
 
 ## Working directory
 
-The working directory is the where *R* looks when we give it a file name, and where it will save things when we do that.
+The working directory is the where *R* looks if we tell it to work woth a file, either to load or save data (unless we tell it otherwise).
 
 Let's see what the current working directory is:
 
@@ -12,7 +12,7 @@ In OS X or Linux the result should look like:
 
 `[1] "/home/your_username/"`
 
-On Windows more like:
+On Windows it should look more like:
 
 `[1] "C:\Users\your_username"`
 
@@ -42,9 +42,9 @@ You can use the commands `head` and `tail` to view the first or last six lines o
 
 ![First lines of Titanic Kaggle training dataset](images/head-titanic-train.png)
 
-Notice how when more columns are provided in the data than there is space to show the rows are split and referenced using an index/row name - the number before the data on each line.
+Notice how when more columns are provided in the data than there is space to display the rows are split and referenced using an index/row name - the number before the data on each line.
 
-Try using the help to find out how to show a different number of lines.
+Try using the help to find out how to display a different number of lines.
 
 The `names` command lists all of the columns in the data:
 
@@ -62,7 +62,8 @@ A quick overview of the data can be obtained using `summary`:
 ![Summary of Titanic Kaggle training dataset](images/titanic-train-summary.png)
 
 A few things can be seen very easily in this summary - for example there are a lot of *NA*s in the Age column (177 in fact).
-In this case this isn't an actual NA in the input file, *R* has recognized a blank line in a numerical column and replaced it with *NA*.
+In this case, this isn't an actual NA in the input file.
+*R* has recognized a blank line in a numerical column and replaced it with *NA*.
 
 To access all values from a particular column we use the `$` syntax.
 To see all the values from the *Age* column use:
