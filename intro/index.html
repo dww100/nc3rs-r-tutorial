@@ -133,12 +133,14 @@
               
                 <p>First things first, open up R studio.</p>
 <p><img alt="R Studio at startup" src="../images/rstudio-startup.png" /></p>
-<p>You should see something like the above; a window with the panes - a <strong>Console</strong> with some introductory text and a blue <code>&gt;</code> prompt, an empty <strong>Enviroment</strong> and a <strong>Files</strong> browser showing the contents of the current directory.</p>
-<p>Lets play with some very basic commands.
-You need to select the <strong>Console</strong> window and type after the <code>&gt;</code> prompt (and type <em>Enter</em> after each one to execute the command).</p>
-<p>In the rest of the text we will use the following conventions (which echo what you will see in your <strong>Command</strong> window):
-<em>  Commands will be shown with a preceding '&gt;' as a guide to what you should enter - you must <strong>not</strong> type it in as part of the command.
-</em>  The output expected from <em>R</em> will be preceded by a number in square brackets (for example <code>[1]</code>)</p>
+<p>You should see something like the above; a window with three panes - a <strong>Console</strong> with some introductory text and a blue <code>&gt;</code> prompt, an empty <strong>Enviroment</strong> and a <strong>Files</strong> browser showing the contents of the current directory.</p>
+<p>Lets start with some very basic commands.
+You need to select the <strong>Console</strong> window and type after the <code>&gt;</code> prompt (and type <em>Enter</em> after each command to execute).</p>
+<p>In the rest of the text we will use the following conventions (which echo what you will see in your <strong>Command</strong> window):</p>
+<ul>
+<li>Commands will be shown with a preceding <code>&gt;</code> prompt. Note: You must <strong>not</strong> type <code>&gt;</code> in as part of the command.</li>
+<li>The output expected from <em>R</em> will be preceded by a number in square brackets (for example <code>[1]</code>)</li>
+</ul>
 <h2 id="basic-maths">Basic maths</h2>
 <p><em>R</em> can be used as a simple calculator.
 As in many programming languages, multiply is <code>*</code> and divide is <code>/</code>.</p>
@@ -151,7 +153,7 @@ As in many programming languages, multiply is <code>*</code> and divide is <code
 <h3 id="division">Division</h3>
 <pre><code class="R">&gt; 1 / 2
 
-&gt;[1] 0.5
+[1] 0.5
 </code></pre>
 
 <h3 id="multiplication">Multiplication</h3>
@@ -162,22 +164,23 @@ As in many programming languages, multiply is <code>*</code> and divide is <code
 
 <h2 id="keeping-the-results-of-calculations">Keeping the results of calculations</h2>
 <p>If this was the only thing <em>R</em> could do it would be pretty useless.
-It is very useful to to store the results of a command with a name so we can use it again later.
+We need to be able to store the results of a command with a name in order to use it again later.
 In programming this is called assigning a value in a <em>variable</em>.
-In <em>R</em> there are two commands to assign a value to a variable - <code>&lt;-</code> and <code>=</code>.
+In <em>R</em> there are two commands to assign a value to a variable; <code>&lt;-</code> and <code>=</code>.
 Try the following:</p>
 <p><code>my_result &lt;- 7 + 3</code></p>
 <p>Note how there is now no output with square brackets.
-To see the value in the variable <code>x</code> use the following command:</p>
+To see the value in the variable <code>my_result</code> use the following command:</p>
 <p><code>print(my_result)</code></p>
-<p>You will also see that <code>my_result</code> has been added to the <strong>Values</strong> section of the <strong>Environment</strong> pane (top right) in R Studio.</p>
+<p>You will also see that <code>my_result</code> has been added to the <strong>Values</strong> section of the <strong>Environment</strong> pane (top right) in <em>R Studio</em>.</p>
 <h2 id="getting-help">Getting help</h2>
 <p>We have just used our first <em>R</em> function - <code>print</code>.
-Functions take input surrounded by brackets.</p>
+Functions take input surrounded by brackets
+In the example above we used the variable <code>my_results</code> as input to the <code>print</code> function.</p>
 <p>To get more information on how to use a function you can use <code>?</code>, for example:</p>
 <p><code>?print</code></p>
-<p>You will then see more information in the <strong>Help</strong> tab on the function in the bottom right pane in R Studio.
-This is a tab in the pane which initially held the <strong>Files</strong> - this can easily be recovered from tab menu there.</p>
+<p>Information on the function will be shown in the <strong>Help</strong> tab of the bottom right pane in <em>R Studio</em>.
+You can get return to the <strong>Files</strong> information at any time from the tab list.</p>
               
             </div>
           </div>

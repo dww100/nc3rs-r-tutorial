@@ -126,12 +126,12 @@
               
                 <p>In order to work on real data the first thing we need to learn is how to read from files.</p>
 <h2 id="working-directory">Working directory</h2>
-<p>The working directory is the where <em>R</em> looks when we give it a file name, and where it will save things when we do that.</p>
+<p>The working directory is the where <em>R</em> looks if we tell it to work woth a file, either to load or save data (unless we tell it otherwise).</p>
 <p>Let's see what the current working directory is:</p>
 <p><code>&gt; cwd()</code></p>
 <p>In OS X or Linux the result should look like:</p>
 <p><code>[1] "/home/your_username/"</code></p>
-<p>On Windows more like:</p>
+<p>On Windows it should look more like:</p>
 <p><code>[1] "C:\Users\your_username"</code></p>
 <p>It is a good idea to use a separate directory for all of your projects.
 To change the working directory you can either use the command <code>setwd</code> or the <strong>Files</strong> tab of the bottom right pane in R Studio.</p>
@@ -148,8 +148,8 @@ Click on this line and a new pane will appear above the <strong>Console</strong>
 <p>You can use the commands <code>head</code> and <code>tail</code> to view the first or last six lines of the data:</p>
 <p><code>&gt; head(train)</code></p>
 <p><img alt="First lines of Titanic Kaggle training dataset" src="../images/head-titanic-train.png" /></p>
-<p>Notice how when more columns are provided in the data than there is space to show the rows are split and referenced using an index/row name - the number before the data on each line.</p>
-<p>Try using the help to find out how to show a different number of lines.</p>
+<p>Notice how when more columns are provided in the data than there is space to display the rows are split and referenced using an index/row name - the number before the data on each line.</p>
+<p>Try using the help to find out how to display a different number of lines.</p>
 <p>The <code>names</code> command lists all of the columns in the data:</p>
 <pre><code>&gt; names(train)
 
@@ -161,7 +161,8 @@ Click on this line and a new pane will appear above the <strong>Console</strong>
 <p><code>&gt; summary(trains)</code></p>
 <p><img alt="Summary of Titanic Kaggle training dataset" src="../images/titanic-train-summary.png" /></p>
 <p>A few things can be seen very easily in this summary - for example there are a lot of <em>NA</em>s in the Age column (177 in fact).
-In this case this isn't an actual NA in the input file, <em>R</em> has recognized a blank line in a numerical column and replaced it with <em>NA</em>.</p>
+In this case, this isn't an actual NA in the input file.
+<em>R</em> has recognized a blank line in a numerical column and replaced it with <em>NA</em>.</p>
 <p>To access all values from a particular column we use the <code>$</code> syntax.
 To see all the values from the <em>Age</em> column use:</p>
 <p><code>&gt; train$Age</code></p>
