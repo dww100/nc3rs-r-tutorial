@@ -1,6 +1,7 @@
 *R* has many graphing options.
-Here we introduce those available without any libraries, this is known as base graphing.
-In this introduction we will only cover how to make quick plots using these functions but they are in fact very flexible and can easily be made publication quality.
+Here we introduce those available without any libraries.
+This is known as base graphing.
+In this introduction, we will only cover how to make quick plots using these functions but they are in fact very flexible and can easily be made publication quality.
 
 ## Scatter plot
 
@@ -9,11 +10,11 @@ This is created using the command:
 
 `> plot(has_age$Age, has_age$Fare)`
 
-This command will create the plot below (showing pretty much no corellation).
+This command will create the plot below (showing pretty much no coirrelation).
 
 ![](images/basic-scatter-initial.png)
 
-There are many options to alter the appearance of the produced graph that can be passed to the `plot` function.
+There are many options to alter the appearance of the graph that can be passed to the `plot` function.
 Some of the most common are:
 
 | Option     | Description                 |
@@ -24,8 +25,10 @@ Some of the most common are:
 | ylab       | Y-axis label                |
 | main       | Main plot title             |
 
-The help for plot is less straight forward than usual, more helpful for information on these parameters is available in the *par* and *plot.default* help files.
-An example of using them is below:
+The help for `plot` (found using `?plot`) is less straight forward than usual.
+More helpful information on these parameters is available in the *par* and *plot.default* help files.
+
+Here is an example of how to improve the graph appearance:
 
 ```
 plot(has_age$Age, has_age$Fare,
@@ -51,7 +54,7 @@ Now we can be even more certain there is not trend ;)
 
 ## Histogram
 
-Another simple plot that base graphics handles simply is the histogram.
+Another plot that base graphics can produce simply is the histogram.
 This is created using the `hist` command:
 
 `> hist(has_age$Age, xlab ='Age')`
@@ -60,7 +63,7 @@ This is created using the `hist` command:
 
 ## Box plot
 
-A slightly more complicated graph is the box plot.
+An example of a slightly more complicated graph available in base graphing is the box plot.
 
 `> boxplot(has_age$Fare ~ has_age$Survived, xlab='Survived?', ylab='Fare')`
 
