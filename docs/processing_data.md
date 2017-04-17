@@ -1,17 +1,19 @@
 
-In many situations we don't want or need to work with all the data but only a subset of the information.
+In many situations we don't want, or need, to work with all the data.
+Instead, we are only interested in a subset of the information.
 *R* provides several ways to access only parts of the data you have read in.
 
 ## Subsetting
 
-Perhaps the most common need is to filter your dataset to look at only that part that meets some criteria.
-In *R* this is most simply done using the `subset` function.
+Perhaps the most common need is to filter your dataset to look at only that part which meets some criteria.
+In *R*, this is most simply done using the `subset` function.
 Let's look at just the female passengers:
 
 `> females <- subset(train, Sex == "female")`
 
 Note that we use `==` here as we want an equality (`=` is used for assignment).
-We can also use other comparisons, the full set of options is:
+We can also use other comparisons.
+The full set of options is:
 
 | Operator   | Description                 |
 |------------|-----------------------------|
@@ -32,7 +34,7 @@ You can combine multiple filters using the logical operators `&` for AND and `|`
 
 Sometimes it is more useful to refer to specific rows, columns, or both using the `[]` notation.
 *R* interprets numbers within square brackets as [row, column].
-So for example `train[1,2]` would return `0` as Mr. Owen Harris Braund (the first passenger in our table) sadly did not survive (the second column is *Survived*).
+So for example, `train[1,2]` would return `0` as Mr. Owen Harris Braund (the first passenger in our table) sadly did not survive (the second column is *Survived*).
 
 We can select a value using just rows, just columns, or both, using column/row numbers.
 We can also ask for a set of rows or columns, referred to as a
@@ -46,20 +48,20 @@ To get the first two columns for all passengers:
 `> train[, 1:2]`
 
 In these examples a blank entry for column or row selects all entries.
-If we want to exclude a line we could use, for example if we believe Mr. Owen Harris Braund to have lied about his age, we can use a negative value:
+If we want to exclude a line, for example if we believe Mr. Owen Harris Braund to have lied about his age, we can use a negative value:
 
 `> no_braund <- train[-1,]`
 
-You can obviously combine selections of both rows and columns:
+You can also combine selections of both rows and columns:
 
 `> train[-1, 1:2]`
 
-This command would select the first two columns for everyone but the scandalous liar Braund.
+This command would select the first two columns for everyone but that scandalous liar Braund.
 
 ## Dealing with NAs
 
 We have already seen that the *Age* column in our data contains many *NA* values.
-This can have an impact on calculations we perform on the data.
+This can have an impact on calculations performed on the data.
 For example if we try to calculate the average age of passengers:
 
 ```
@@ -89,12 +91,12 @@ There is a handy function that removes any rows with *NA* entries:
 
 `> no_na <- na.omit(train)`
 
-Be careful when you use if however as it will remove rows even if the *NA* is in a column that you don't wish to process.
+Be careful when you use it however as it will remove rows even if the *NA* is in a column that you don't wish to process.
 
 ## Saving processed data
 
-Now we have made changes to our data we will probably want to keep them available for future analysis sessions.
-To save a CSV file we can use the `write.csv` command, thus:
+Now that we have made changes to our data we will probably want to keep them available for future analysis sessions.
+To save a CSV file we can use the `write.csv` command:
 
 `> write.csv(has_age, file='validated.csv')`
 
@@ -102,7 +104,7 @@ Let's load up the file we saved using:
 
 `> validated <- read.csv('validated.csv')`
 
-Inspect `validated` and you will see we have a new and unwanted column *X*.
+Inspect `validated` and you will see that we have a new and unwanted column *X*.
 What has happened is that by default *R* saves a name for each row (we first encountered these when we examined the input data).
 To prevent this use:
 
