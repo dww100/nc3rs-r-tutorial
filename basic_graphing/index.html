@@ -128,15 +128,16 @@
             <div class="section">
               
                 <p><em>R</em> has many graphing options.
-Here we introduce those available without any libraries, this is known as base graphing.
-In this introduction we will only cover how to make quick plots using these functions but they are in fact very flexible and can easily be made publication quality.</p>
+Here we introduce those available without any libraries.
+This is known as base graphing.
+In this introduction, we will only cover how to make quick plots using these functions but they are in fact very flexible and can easily be made publication quality.</p>
 <h2 id="scatter-plot">Scatter plot</h2>
 <p>The simplest plot available in base <em>R</em> graphing is the scatter plot.
 This is created using the command:</p>
 <p><code>&gt; plot(has_age$Age, has_age$Fare)</code></p>
-<p>This command will create the plot below (showing pretty much no corellation).</p>
+<p>This command will create the plot below (showing pretty much no coirrelation).</p>
 <p><img alt="" src="../images/basic-scatter-initial.png" /></p>
-<p>There are many options to alter the appearance of the produced graph that can be passed to the <code>plot</code> function.
+<p>There are many options to alter the appearance of the graph that can be passed to the <code>plot</code> function.
 Some of the most common are:</p>
 <table>
 <thead>
@@ -168,8 +169,9 @@ Some of the most common are:</p>
 </tr>
 </tbody>
 </table>
-<p>The help for plot is less straight forward than usual, more helpful for information on these parameters is available in the <em>par</em> and <em>plot.default</em> help files.
-An example of using them is below:</p>
+<p>The help for <code>plot</code> (found using <code>?plot</code>) is less straight forward than usual.
+More helpful information on these parameters is available in the <em>par</em> and <em>plot.default</em> help files.</p>
+<p>Here is an example of how to improve the graph appearance:</p>
 <pre><code>plot(has_age$Age, has_age$Fare,
      col = 'red',
      lwd = 2,
@@ -186,12 +188,12 @@ An example of using them is below:</p>
 <p>Now we can be even more certain there is not trend ;)</p>
 <p><a href="../example-scripts/basic_scatter.R">Example answer</a></p>
 <h2 id="histogram">Histogram</h2>
-<p>Another simple plot that base graphics handles simply is the histogram.
+<p>Another plot that base graphics can produce simply is the histogram.
 This is created using the <code>hist</code> command:</p>
 <p><code>&gt; hist(has_age$Age, xlab ='Age')</code></p>
 <p><img alt="" src="../images/basic-histogram.png" /></p>
 <h2 id="box-plot">Box plot</h2>
-<p>A slightly more complicated graph is the box plot.</p>
+<p>An example of a slightly more complicated graph available in base graphing is the box plot.</p>
 <p><code>&gt; boxplot(has_age$Fare ~ has_age$Survived, xlab='Survived?', ylab='Fare')</code></p>
 <p><img alt="" src="../images/basic-boxplot.png" /></p>
               

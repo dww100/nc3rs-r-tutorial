@@ -120,12 +120,19 @@
               
                 <p>A key to making your science reproducible is making the steps involved in your analysis available to others (and indeed your future self).
 A script is nothing more complicated that a file containing all of the commands that you want to run on your data which can be executed again.</p>
-<p>The fact that you have recorded your steps means that not only can you reproduce what you did in the past but quickly re-apply the same steps to a new dataset.</p>
+<p>The fact that you have recorded your steps means that not only can you reproduce what you did in the past, but you can quickly re-apply the same steps to a new dataset.</p>
 <h2 id="creating-a-script-in-r-studio">Creating a script in R Studio</h2>
 <p>Open a new file from the menu by selecting <em>File</em> -&gt; <em>New File</em> -&gt; <em>R Script</em> (or use the keyboard shortcut <em>Ctrl</em> + <em>Shift</em> + <em>N</em>).
 An empty file will appear in the pane above the <strong>Console</strong>.</p>
-<p>Write the commands we have already used to load the original titanic data and remove lines with no values provided for the passengers <em>Age</em> and then save a new file into this pane.
-You can provide information on what the lines do using comments.
+<p>Write commands into this pane to:</p>
+<ol>
+<li>load the original titanic data</li>
+<li>remove lines with no values provided for the passengers <em>Age</em> </li>
+<li>save a new file into this pane</li>
+</ol>
+<p>We have already seen how do all of these steps.
+All that is required is to put them together in the correct order.</p>
+<p>You can provide information on what the lines do using comments.
 Comments are lines beginning with <code>#</code> which are ignored by <em>R</em> but can be read by people looking at your script.
 Your scripts should look something like:</p>
 <pre><code># Load the original data
@@ -141,11 +148,18 @@ write.csv(has_age, file='validated.csv', row.names=FALSE)
 <p>Save this as a file using the menu selection <em>File</em> -&gt; <em>Save</em> (or the shortcut <em>Ctrl</em> + <em>S</em>).
 Call the file 'remove-nas.R', as the standard extension for an <em>R</em> script is '.R'.</p>
 <h2 id="sourcing-the-script">Sourcing the script</h2>
-<p>In order that we can be sure our script correctly loads and edits the data we need to remove the version of the variables we have created previously.
+<p>If the same variable names are in the script as were entered before then this will be over written.
+Also, where a variable is used in the script but not given a value it can use these earlier entries.
+In order to ensure our script can be used in future, even if we haven't entered any commands, we need to remove the versions of variables we have created previously.
 Use the menu option <em>Session</em> -&gt; <em>Clear Workspace</em> to do this.</p>
 <p>Now we can execute the script.
-There are several options of how to do this, from the main menu select <em>Code</em> -&gt; <em>Source</em>, the <em>Source</em> button on the script pane or use the keyboard shortcut <em>Ctrl</em> + <em>Shift</em> + <em>S</em>.</p>
-<p>Once run you should see <code>train</code> and <code>has_age</code> in the <strong>Data</strong> section of the <strong>Environment</strong> pane.
+There are several different ways to do this:</p>
+<ul>
+<li>From the main menu select <em>Code</em> -&gt; <em>Source</em></li>
+<li>Select the <em>Source</em> button on the script pane </li>
+<li>Use the keyboard shortcut <em>Ctrl</em> + <em>Shift</em> + <em>S</em></li>
+</ul>
+<p>Once run, you should see <code>train</code> and <code>has_age</code> in the <strong>Data</strong> section of the <strong>Environment</strong> pane.
 Check that these contain the data as expected (perhaps also look in the 'validated.csv' file).</p>
               
             </div>
