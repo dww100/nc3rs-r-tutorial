@@ -1,7 +1,7 @@
 # NC3Rs David Sainsbury Fellows Meeting: R Tutorial
 
 This tutorial provides a basic introduction to the *R* statistical modelling and graphing environment.
-The basic goal is to convince you that scripting and analysis in a programming language like *R* is vastly superior to using Excel.
+The basic goal is to demonstrate that scripting and analysis in a programming language like *R* is vastly superior to using spreadsheets (such as Excel).
 No assumptions are made about previous programming experience.
 
 ## Learning objectives
@@ -9,12 +9,12 @@ No assumptions are made about previous programming experience.
 After completing this tutorial you should:
 
 * be familiar with basic *R* commands and *R Studio*
-* able to import, explore and manipulate your data in *R*
-* know how to get help and find documentation
+* be able to import, explore and manipulate your data in *R*
+* know how and where to get help and documentation
 * be capable of creating and modifying simple *R* scripts
 * seen how to create a beautiful plot using *ggplot2*
 
-## Prerequistites
+## Prerequisites
 
 To follow this course you need to have installed *R* and *R Studio* on your laptop.
 If you haven't already done so they can be downloaded (for free) from the links below:
@@ -24,7 +24,7 @@ If you haven't already done so they can be downloaded (for free) from the links 
 
 ## Acknowledgments
 
-Content of this tutorial built upon the following previous documents:
+Content of this tutorial built upon the following:
 
 * [NIH - Introduction to R for Non-programmers](http://nihlibrary.campusguides.com/dataservices/intro_to_r)
 * [Jim Tyson - First course in R](https://jimbotyson.github.io/rcourse/index.html)
