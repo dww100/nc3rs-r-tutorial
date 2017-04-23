@@ -59,7 +59,7 @@ To see the value in the variable `my_result` use the following command:
 
 You will also see that `my_result` has been added to the **Values** section of the **Environment** pane (top right) in *R Studio*.
 
-## Getting help
+## Help command
 
 We have just used our first *R* function - `print`.
 Functions take input surrounded by brackets
