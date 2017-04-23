@@ -11,7 +11,8 @@ pages:
     - Working with data: processing_data.md
     - Scripting: scripting.md
     - Basic Graphing: basic_graphing.md
-    - Advanced Graphing: advanced_graphing.md
+    - Advanced Graphing I: advanced_graphing.md
+    - Advanced Graphing II: advanced_graphing_ii.md
 
 theme: readthedocs
 
