@@ -87,6 +87,15 @@
     <a class="current" href="./">Advanced Graphing II</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#improving-plot-appearance-in-ggplot2">Improving plot appearance in ggplot2</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#labelling-datapoints">Labelling datapoints</a></li>
+        
+        </ul>
+    
+
     </ul>
 	    </li>
           
@@ -125,9 +134,47 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_1"></h1>
-<h2 id="_2"></h2>
-<h2 id="_3"></h2>
+                <h1 id="improving-plot-appearance-in-ggplot2">Improving plot appearance in ggplot2</h1>
+<p>Our graph now contains most of the functional data from the Economist graph.
+However, it misses the labels added to highlight some countries of note and doesn't yet look very attractive.
+Lets put those things right.</p>
+<h2 id="labelling-datapoints">Labelling datapoints</h2>
+<p>The Economist chose to pick out a subset of countries to highlight.
+To do the same in <em>R</em> we need to create a list of the datapoints we are interested in.
+To create a list in <em>R</em> we use the <code>c</code> function:</p>
+<pre><code>&gt;target_countries &lt;- c(
+  &quot;Russia&quot;, &quot;Venezuela&quot;, &quot;Iraq&quot;, &quot;Myanmar&quot;, &quot;Sudan&quot;,
+  &quot;Afghanistan&quot;, &quot;Congo&quot;, &quot;Greece&quot;, &quot;Argentina&quot;, &quot;Brazil&quot;,
+  &quot;India&quot;, &quot;Italy&quot;, &quot;China&quot;, &quot;South Africa&quot;, &quot;Spane&quot;,
+  &quot;Botswana&quot;, &quot;Cape Verde&quot;, &quot;Bhutan&quot;, &quot;Rwanda&quot;, &quot;France&quot;,
+  &quot;United States&quot;, &quot;Germany&quot;, &quot;Britain&quot;, &quot;Barbados&quot;, &quot;Norway&quot;, &quot;Japan&quot;,
+  &quot;New Zealand&quot;, &quot;Singapore&quot;
+  )
+</code></pre>
+
+<p>Now we need to pick out the data for these countries from <code>econ</code>.
+The operator <code>%in%</code> can be used to match entries in <code>econ$Country</code> that appear in the <code>target_countries</code> list we just made.
+We can combine this with the <code>subset</code> function to get the data we want:</p>
+<pre><code>&gt;labeled_countries &lt;- subset(econ, Country %in% target_countries)
+</code></pre>
+
+<p>This graph has a lot of closely packed datapoints and we don't want our labels to overlap.
+This means we need a non-standard text labelling <em>geom</em>.
+Load the <em>ggrepel</em> library to add this to our environment.</p>
+<pre><code>library(ggrepel)
+</code></pre>
+
+<p>The <em>geom</em> we want is <code>geom_text_repel</code>.
+As we only want to label the countries in <code>labeled_countries</code> we need to set the <code>data</code> option for this <em>geom</em>, rather than using the default inhereted from <code>ggplot</code> (in this case <code>econ</code>).
+Try creating teh labelled graph using:</p>
+<pre><code>&gt;ggplot(econ, aes(x = CPI, y = HDI)) + 
+  geom_point(aes(color = Region), shape = 1, stroke = 1, size = 2.5) +
+  geom_text_repel(aes(label = Country), data = labeled_countries, force = 10) +
+  stat_smooth(method = &quot;lm&quot;, formula = y ~ log(x), se = FALSE, color = &quot;red&quot;, size = 0.5) 
+</code></pre>
+
+<p><img alt="" src="../images/economist-labelled.png" /></p>
+<h2 id="_1"></h2>
               
             </div>
           </div>
