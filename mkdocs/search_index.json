@@ -149,6 +149,26 @@
             "location": "/basic_graphing/#box-plot",
             "text": "An example of a slightly more complicated graph available in base graphing is the box plot.  > boxplot(has_age$Fare ~ has_age$Survived, xlab='Survived?', ylab='Fare')",
             "title": "Box plot"
+        },
+        {
+            "location": "/advanced_graphing/",
+            "text": "Advanced graphing with ggplot2\n\n\nIn this section we will recreate a graph from the Economist (shown below), providing a crash course in making beautiful figures with ggplot2.\n\n\n\n\nThis was originally used as a challenge in the Harvard tutorial available \nhere\n.\nIt is well worth checking out that tutorial to get a better understanding of the steps used here to build up the graph.\n\n\nObtaining the data\n\n\nWe can load the data the graph is based on directly from the tutorial website using:\n\n\necon <- read.csv(\"https://dww100.github.io/nc3rs-r-tutorial/data/economist.csv\")\n\n\n\n\nThe data is available \nhere\n to download and read from the file system if you prefer.\n\n\nInvestigate the data using either the \nR Studio\n data viewer or using the command:\n\n\nhead(econ)\n\n\n\n\nThe two columns we are most interested in are \nCPI\n (Corruptions Perception Index) and \nHDI\n (Human Development Index).\n\n\nCreate a simple plot\n\n\nTo create a scatter plot of the data with \nCPI\n on the x-axis and \nHDI\n on the y-axis enter the folowing:\n\n\n> ggplot(econ, aes(x = CPI, y = HDI)) +\n  geom_point()\n\n\n\n\nAs in the earlier example the \nggplot\n command here creates the plot object and selects the \nCPI\n and \nHDI\n columns to be the x and y variables.\n\ngeom_point\n then adds the scatter plot layer.\nYour plot should look something like the one below.\n\n\n\n\nThis looks pretty bland and no distinction has been made between the points representing data different regions of the world.\nTo brighten the graph up lets color the points based on \nRegion\n and alter the dots to hollow points (as used in the Economist graph).\n\n\n>ggplot(econ, aes(x = CPI, y = HDI)) + \n  geom_point(aes(color = Region), shape = 1)\n\n\n\n\nNext",
+            "title": "Advanced Graphing"
+        },
+        {
+            "location": "/advanced_graphing/#advanced-graphing-with-ggplot2",
+            "text": "In this section we will recreate a graph from the Economist (shown below), providing a crash course in making beautiful figures with ggplot2.   This was originally used as a challenge in the Harvard tutorial available  here .\nIt is well worth checking out that tutorial to get a better understanding of the steps used here to build up the graph.",
+            "title": "Advanced graphing with ggplot2"
+        },
+        {
+            "location": "/advanced_graphing/#obtaining-the-data",
+            "text": "We can load the data the graph is based on directly from the tutorial website using:  econ <- read.csv(\"https://dww100.github.io/nc3rs-r-tutorial/data/economist.csv\")  The data is available  here  to download and read from the file system if you prefer.  Investigate the data using either the  R Studio  data viewer or using the command:  head(econ)  The two columns we are most interested in are  CPI  (Corruptions Perception Index) and  HDI  (Human Development Index).",
+            "title": "Obtaining the data"
+        },
+        {
+            "location": "/advanced_graphing/#create-a-simple-plot",
+            "text": "To create a scatter plot of the data with  CPI  on the x-axis and  HDI  on the y-axis enter the folowing:  > ggplot(econ, aes(x = CPI, y = HDI)) +\n  geom_point()  As in the earlier example the  ggplot  command here creates the plot object and selects the  CPI  and  HDI  columns to be the x and y variables. geom_point  then adds the scatter plot layer.\nYour plot should look something like the one below.   This looks pretty bland and no distinction has been made between the points representing data different regions of the world.\nTo brighten the graph up lets color the points based on  Region  and alter the dots to hollow points (as used in the Economist graph).  >ggplot(econ, aes(x = CPI, y = HDI)) + \n  geom_point(aes(color = Region), shape = 1)  Next",
+            "title": "Create a simple plot"
         }
     ]
 }
