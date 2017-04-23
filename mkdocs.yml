@@ -1,6 +1,8 @@
 site_name: NC3Rs R Tutorial
 site_description: An introduction to R - initially presented to the NC3Rs fellows in 2017
 site_author: David W. Wright
+repo_url: https://github.com/dww100/nc3rs-r-tutorial
+edit_uri: edit/master/docs/
 
 pages:
     - Home: index.md
@@ -9,8 +11,9 @@ pages:
     - Working with data: processing_data.md
     - Scripting: scripting.md
     - Basic Graphing: basic_graphing.md
+    - Advanced Graphing: advanced_graphing.md
 
 theme: readthedocs
 
-copyright: <p>Created by David W. Wright, source available at <a href="https://github.com/dww100/nc3rs-r-tutorial">https://github.com/dww100/nc3rs-r-tutorial</a></p> <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"> This work is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/"/>Creative Commons Attribution-ShareAlike 4.0 International License.</a>
+copyright: <p>Created by David W. Wright</p> <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"> This work is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/"/>Creative Commons Attribution-ShareAlike 4.0 International License.</a>
 
