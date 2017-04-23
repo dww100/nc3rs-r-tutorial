@@ -1,8 +1,8 @@
 # The ggplot2 library
 
->The emphasis in ggplot2 is reducing the amount of thinking time by making it easier to go from the plot in your brain to the plot on the page. (Hadley Wickham, 2012)
+>"The emphasis in ggplot2 is reducing the amount of thinking time by making it easier to go from the plot in your brain to the plot on the page." (Hadley Wickham, 2012)
 
->Base graphics are good for drawing pictures; ggplot2 graphics are good for understanding the data. (Hadley Wickham, 2012)
+>"Base graphics are good for drawing pictures; ggplot2 graphics are good for understanding the data." (Hadley Wickham, 2012)
 
 The *ggplot2* library is designed to provide a way of building highly informative publication-quality graphics. 
 The “gg” stands for “Grammar of Graphics”, and the package is an implementation of a way of thinking about graphic construction outlined in the text by Wilkinson.
