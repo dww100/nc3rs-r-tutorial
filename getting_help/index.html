@@ -8,7 +8,7 @@
   
   <meta name="author" content="David W. Wright">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Introduction - NC3Rs R Tutorial</title>
+  <title>Getting help - NC3Rs R Tutorial</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Introduction";
-    var mkdocs_page_input_path = "intro.md";
-    var mkdocs_page_url = "/intro/";
+    var mkdocs_page_name = "Getting help";
+    var mkdocs_page_input_path = "getting_help.md";
+    var mkdocs_page_url = "/getting_help/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -52,31 +52,9 @@
     <a class="" href="..">Home</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Introduction</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#basic-maths">Basic maths</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#addition">Addition</a></li>
-        
-            <li><a class="toctree-l3" href="#division">Division</a></li>
-        
-            <li><a class="toctree-l3" href="#multiplication">Multiplication</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l2"><a href="#keeping-the-results-of-calculations">Keeping the results of calculations</a></li>
-    
-
-    <li class="toctree-l2"><a href="#getting-help">Getting help</a></li>
-    
-
-    </ul>
+    <a class="" href="../intro/">Introduction</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -99,9 +77,25 @@
     <a class="" href="../basic_graphing/">Basic graphing</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../getting_help/">Getting help</a>
+    <a class="current" href="./">Getting help</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#how-to-get-help">How to get help</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#useful-links">Useful links</a></li>
+        
+            <li><a class="toctree-l3" href="#tutorials">Tutorials</a></li>
+        
+            <li><a class="toctree-l3" href="#books">Books</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -141,10 +135,10 @@
     
       
     
-    <li>Introduction</li>
+    <li>Getting help</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/dww100/nc3rs-r-tutorial/edit/master/docs/intro.md"
+        <a href="https://github.com/dww100/nc3rs-r-tutorial/edit/master/docs/getting_help.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -154,56 +148,41 @@
           <div role="main">
             <div class="section">
               
-                <p>First things first, open up R studio.</p>
-<p><img alt="R Studio at startup" src="../images/rstudio-startup.png" /></p>
-<p>You should see something like the above; a window with three panes - a <strong>Console</strong> with some introductory text and a blue <code>&gt;</code> prompt, an empty <strong>Enviroment</strong> and a <strong>Files</strong> browser showing the contents of the current directory.</p>
-<p>Lets start with some very basic commands.
-You need to select the <strong>Console</strong> window and type after the <code>&gt;</code> prompt (and type <em>Enter</em> after each command to execute).</p>
-<p>In the rest of the text we will use the following conventions (which echo what you will see in your <strong>Command</strong> window):</p>
+                <h1 id="how-to-get-help">How to get help</h1>
+<p>Now you have a flavour of what <em>R</em> can do for you.
+However, there will be many things that this tutorial hasn't and won't cover.
+<em>R</em> has a great community and excellent documentation is part of that.
+Have a quick look at at few of these sources before you move on to see some fancy graphing with the <em>ggplot2</em> package.</p>
+<h2 id="useful-links">Useful links</h2>
 <ul>
-<li>Commands will be shown with a preceding <code>&gt;</code> prompt. Note: You must <strong>not</strong> type <code>&gt;</code> in as part of the command.</li>
-<li>The output expected from <em>R</em> will be preceded by a number in square brackets (for example <code>[1]</code>)</li>
+<li>Help function (<code>?command</code> or <code>help(command)</code>)</li>
+<li>Vignettes - usually linked in package help</li>
+<li>Google </li>
+<li><a href="https://stackoverflow.com/documentation/r/topics">Stack Overflow</a></li>
+<li><a href="https://www.rstudio.com/resources/cheatsheets/">R Studio Cheatsheets</a></li>
+<li><a href="http://search.r-project.org/">search.r-project.org</a></li>
+<li><a href="https://www.r-bloggers.com/">R Bloggers</a></li>
+<li><a href="http://rseek.org/">R Seek</a></li>
 </ul>
-<h2 id="basic-maths">Basic maths</h2>
-<p><em>R</em> can be used as a simple calculator.
-As in many programming languages, multiply is <code>*</code> and divide is <code>/</code>.</p>
-<h3 id="addition">Addition</h3>
-<pre><code class="R">&gt; 1 + 2
-
-[1] 3
-</code></pre>
-
-<h3 id="division">Division</h3>
-<pre><code class="R">&gt; 1 / 2
-
-[1] 0.5
-</code></pre>
-
-<h3 id="multiplication">Multiplication</h3>
-<pre><code class="R">&gt; 2 * 2
-
-[1] 4
-</code></pre>
-
-<h2 id="keeping-the-results-of-calculations">Keeping the results of calculations</h2>
-<p>If this was the only thing <em>R</em> could do it would be pretty useless.
-We need to be able to store the results of a command with a name in order to use it again later.
-In programming this is called assigning a value in a <em>variable</em>.
-In <em>R</em> there are two commands to assign a value to a variable; <code>&lt;-</code> and <code>=</code>.
-Try the following:</p>
-<p><code>my_result &lt;- 7 + 3</code></p>
-<p>Note how there is now no output with square brackets.
-To see the value in the variable <code>my_result</code> use the following command:</p>
-<p><code>print(my_result)</code></p>
-<p>You will also see that <code>my_result</code> has been added to the <strong>Values</strong> section of the <strong>Environment</strong> pane (top right) in <em>R Studio</em>.</p>
-<h2 id="getting-help">Getting help</h2>
-<p>We have just used our first <em>R</em> function - <code>print</code>.
-Functions take input surrounded by brackets
-In the example above we used the variable <code>my_results</code> as input to the <code>print</code> function.</p>
-<p>To get more information on how to use a function you can use <code>?</code>, for example:</p>
-<p><code>?print</code></p>
-<p>Information on the function will be shown in the <strong>Help</strong> tab of the bottom right pane in <em>R Studio</em>.
-You can get return to the <strong>Files</strong> information at any time from the tab list.</p>
+<h2 id="tutorials">Tutorials</h2>
+<ul>
+<li><a href="http://nihlibrary.campusguides.com/dataservices/intro_to_r">NIH - Introduction to R for Non-programmers</a></li>
+<li><a href="https://software-carpentry.org/lessons/">Software Carpentry</a></li>
+<li><a href="https://jimbotyson.github.io/rcourse/index.html">Jim Tyson - First course in R</a></li>
+<li><a href="https://altaf-ali.github.io/ggplot_tutorial/">Altaf Ali - Data Visualization in R with ggplot2</a></li>
+<li><a href="http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html">Harvard University - Introduction to R Graphics with ggplot2</a></li>
+<li><a href="https://www.tutorialspoint.com/r/">Tutorials Point</a></li>
+</ul>
+<h2 id="books">Books</h2>
+<ul>
+<li>"R for Data Science", Garrett Grolemund &amp; Hadley Wickham,
+<a href="http://r4ds.had.co.nz/">http://r4ds.had.co.nz/)</a>
+<a href="https://www.amazon.co.uk/R-Data-Science-Garrett-Grolemund/dp/1491910399">physical copy on Amazon</a></li>
+<li>"Learning R: A Step-by-Step Function Guide to Data Analysis", Richard Cotton,
+<a href="https://www.amazon.co.uk/Learning-R-Richard-Cotton/dp/1449357105">Amazon</a></li>
+<li>"R in a Nutshell: A Desktop Quick Reference (In a Nutshell)", Joseph Adler,
+<a href="https://www.amazon.co.uk/R-Nutshell-OReilly-Joseph-Adler/dp/144931208X">Amazon</a></li>
+</ul>
               
             </div>
           </div>
@@ -211,10 +190,10 @@ You can get return to the <strong>Files</strong> information at any time from th
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../data_from_files/" class="btn btn-neutral float-right" title="Reading data from files">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../ggplot2/" class="btn btn-neutral float-right" title="Introducing ggplot2">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../basic_graphing/" class="btn btn-neutral" title="Basic graphing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -244,10 +223,10 @@ You can get return to the <strong>Files</strong> information at any time from th
           <a href="https://github.com/dww100/nc3rs-r-tutorial" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../basic_graphing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../data_from_files/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../ggplot2/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

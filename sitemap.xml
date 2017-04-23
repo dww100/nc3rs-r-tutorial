@@ -51,6 +51,14 @@
 
     
     <url>
+     <loc>/getting_help/</loc>
+     <lastmod>2017-04-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>/ggplot2/</loc>
      <lastmod>2017-04-23</lastmod>
      <changefreq>daily</changefreq>
