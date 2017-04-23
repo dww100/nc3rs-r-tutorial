@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="David W. Wright">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Introducing ggplot2 - NC3Rs R Tutorial</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Introducing ggplot2";
+    var mkdocs_page_input_path = "ggplot2.md";
+    var mkdocs_page_url = "/ggplot2/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> NC3Rs R Tutorial</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../intro/">Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../data_from_files/">Reading data from files</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../processing_data/">Working with data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../scripting/">Scripting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../basic_graphing/">Basic Graphing</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Introducing ggplot2</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#the-ggplot2-library">The ggplot2 library</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#references">References</a></li>
+        
+            <li><a class="toctree-l3" href="#package-installation">Package installation</a></li>
+        
+            <li><a class="toctree-l3" href="#scatterplot">Scatterplot</a></li>
+        
+            <li><a class="toctree-l3" href="#histogram">Histogram</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../advanced_graphing/">Advanced Graphing I</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../advanced_graphing_ii/">Advanced Graphing II</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">NC3Rs R Tutorial</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Introducing ggplot2</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/dww100/nc3rs-r-tutorial/edit/master/docs/ggplot2.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-ggplot2-library">The ggplot2 library</h1>
+<blockquote>
+<p>The emphasis in ggplot2 is reducing the amount of thinking time by making it easier to go from the plot in your brain to the plot on the page. (Hadley Wickham, 2012)</p>
+<p>Base graphics are good for drawing pictures; ggplot2 graphics are good for understanding the data. (Hadley Wickham, 2012)</p>
+</blockquote>
+<p>The <em>ggplot2</em> library is designed to provide a way of building highly informative publication-quality graphics. 
+The “gg” stands for “Grammar of Graphics”, and the package is an implementation of a way of thinking about graphic construction outlined in the text by Wilkinson.</p>
+<p>Instead of thinking about a single plotting function, <em>ggplot2</em> uses a “grammar” approach, linking together elements to form more and more complex sequences that layer on more information or nuance.</p>
+<p>The types of elements used include: </p>
+<ul>
+<li>Data</li>
+<li>Aesthetic mapping</li>
+<li>Geometric object</li>
+<li>Statistical transformations</li>
+</ul>
+<p><img alt="" src="../images/ggplot2_blocks.png" /></p>
+<p>In this section we will give a couple of very simple graphs to show how this grammar is applied in practice.
+The following sections will show how this approach can be used to make a more information packed (and attractive) graph.</p>
+<h3 id="references">References</h3>
+<ol>
+<li>L. Wilkinson (2006). The grammar of graphics. Springer Science &amp; Business Media.</li>
+<li>H. Wickham (2010). A Layered Grammar of Graphics. Journal of Computational and Graphical Statistics, 19 (1), pp 3-28 DOI:<a href="http://dx.doi.org/10.1198/jcgs.2009.07098">10.1198/jcgs.2009.07098</a></li>
+</ol>
+<h2 id="package-installation">Package installation</h2>
+<p><em>ggplot2</em> is not part of standard <em>R</em>.
+We need to install and load it as a library.
+If you didn't install the package along with <em>R Studio</em> then use the following command:</p>
+<pre><code>&gt;install.packages(&quot;ggplot2&quot;)
+</code></pre>
+
+<p>When this completes load the library using:</p>
+<pre><code>&gt;library(ggplot2)
+</code></pre>
+
+<p>We will also be using some further additional packages, so issue the following command to add them to your installation:</p>
+<pre><code>&gt;install.packages(c(&quot;scales&quot;, &quot;ggrepel&quot;, &quot;ggthemes&quot;))
+</code></pre>
+
+<h2 id="scatterplot">Scatterplot</h2>
+<p>Let's recreate the scatter plot we made using base graphing.
+This uses two commands combined using a <code>+</code> operator.
+The first <code>ggplot</code> produces a plot object and sets up the data elements to be use, the second creates the graphic elements (here the scatter plot points). 
+In the jargon of <em>ggplot2</em> the command than creates a graphic element direct from data is called a <em>geom</em>.</p>
+<pre><code>&gt;ggplot(has_age, aes(x = Age, y = Fare)) + geom_point()
+</code></pre>
+
+<p><img alt="" src="../images/ggplot2_scatter.png" /></p>
+<p>The <code>ggplot</code> command is using the following elements of the grammar:</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>Data the plot will be based upon</td>
+</tr>
+<tr>
+<td>aes</td>
+<td>Aesthetic mappings for plot</td>
+</tr>
+</tbody>
+</table>
+<p>This schematic shows how we are building up the graph.</p>
+<p><img alt="" src="../images/ggplot2_basics.png" /></p>
+<p>It isn't just the <em>ggplot</em> command which has aesthetics.
+Individual <em>geoms</em> have mappings that apply to them alone, for example colour:</p>
+<pre><code>&gt;ggplot(has_age, aes(x = Age, y = Fare)) + geom_point(aes(color='red'))
+</code></pre>
+
+<p><img alt="" src="../images/ggplot2_scatter_red.png" /></p>
+<h2 id="histogram">Histogram</h2>
+<p>To create a histogram you use <em>geom_histogram</em> rather than <em>geom_point</em>.
+The aesthetic mapping only requires an <code>x</code> value here.
+Here we use the fill to show the breakdown of the histogram by gender.</p>
+<pre><code>&gt;ggplot(has_age, aes(x = Age, fill = Sex)) + geom_histogram()
+</code></pre>
+
+<p><img alt="" src="../images/ggplot2_hist.png" /></p>
+<p>Next we will see how to make more complex plots.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../advanced_graphing/" class="btn btn-neutral float-right" title="Advanced Graphing I">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../basic_graphing/" class="btn btn-neutral" title="Basic Graphing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><p>Created by David W. Wright</p> <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"> This work is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/"/>Creative Commons Attribution-ShareAlike 4.0 International License.</a></p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/dww100/nc3rs-r-tutorial" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../basic_graphing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../advanced_graphing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
