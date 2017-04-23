@@ -10,10 +10,10 @@ pages:
     - Reading data from files: data_from_files.md
     - Working with data: processing_data.md
     - Scripting: scripting.md
-    - Basic Graphing: basic_graphing.md
+    - Basic graphing: basic_graphing.md
     - Introducing ggplot2: ggplot2.md
-    - Advanced Graphing I: advanced_graphing.md
-    - Advanced Graphing II: advanced_graphing_ii.md
+    - Advanced graphing I: advanced_graphing.md
+    - Advanced graphing II: advanced_graphing_ii.md
 
 theme: readthedocs
 
