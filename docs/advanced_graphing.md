@@ -83,4 +83,5 @@ Reduce this size using the `size` option:
 
 ![](images/economist-trend-thin.png)
 
-[Next]()
+In the next part of the tutorial we will add labels to the plot and make the theme resemble the original plot.
+
