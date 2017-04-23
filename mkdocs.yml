@@ -11,6 +11,7 @@ pages:
     - Working with data: processing_data.md
     - Scripting: scripting.md
     - Basic graphing: basic_graphing.md
+    - Getting help: getting_help.md
     - Introducing ggplot2: ggplot2.md
     - Advanced graphing I: advanced_graphing.md
     - Advanced graphing II: advanced_graphing_ii.md
