@@ -22,6 +22,18 @@ If you haven't already done so they can be downloaded (for free) from the links 
 * [R](https://www.r-project.org/)
 * [R Studio](https://www.rstudio.com/products/rstudio/download/)
 
+### Further preparation
+
+The latter stages of the tutorial make use of some additional libraries.
+Instructions on how to install them are provided in the flow of the tutorial but if you want to be ahead of the curve you can install them before you start.
+Open *R Studio* and type the following command at the `>` prompt:
+
+```
+install.packages(c("ggplot2", "scales", "ggrepel", "ggthemes"))
+```
+
+You may be prompted to pick a 'mirror', any choice shuld work but picking the closest site to you is recommended.
+
 ## Acknowledgments
 
 Content of this tutorial built upon the following:
