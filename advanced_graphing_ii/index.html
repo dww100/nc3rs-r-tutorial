@@ -8,7 +8,7 @@
   
   <meta name="author" content="David W. Wright">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Basic Graphing - NC3Rs R Tutorial</title>
+  <title>Advanced Graphing II - NC3Rs R Tutorial</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Basic Graphing";
-    var mkdocs_page_input_path = "basic_graphing.md";
-    var mkdocs_page_url = "/basic_graphing/";
+    var mkdocs_page_name = "Advanced Graphing II";
+    var mkdocs_page_input_path = "advanced_graphing_ii.md";
+    var mkdocs_page_url = "/advanced_graphing_ii/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -72,27 +72,9 @@
     <a class="" href="../scripting/">Scripting</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Basic Graphing</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#scatter-plot">Scatter plot</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#challenge">Challenge</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l2"><a href="#histogram">Histogram</a></li>
-    
-
-    <li class="toctree-l2"><a href="#box-plot">Box plot</a></li>
-    
-
-    </ul>
+    <a class="" href="../basic_graphing/">Basic Graphing</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -100,9 +82,12 @@
     <a class="" href="../advanced_graphing/">Advanced Graphing I</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../advanced_graphing_ii/">Advanced Graphing II</a>
+    <a class="current" href="./">Advanced Graphing II</a>
+    <ul class="subnav">
+            
+    </ul>
 	    </li>
           
         </ul>
@@ -127,10 +112,10 @@
     
       
     
-    <li>Basic Graphing</li>
+    <li>Advanced Graphing II</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/dww100/nc3rs-r-tutorial/edit/master/docs/basic_graphing.md"
+        <a href="https://github.com/dww100/nc3rs-r-tutorial/edit/master/docs/advanced_graphing_ii.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -140,75 +125,9 @@
           <div role="main">
             <div class="section">
               
-                <p><em>R</em> has many graphing options.
-Here we introduce those available without any libraries.
-This is known as base graphing.
-In this introduction, we will only cover how to make quick plots using these functions but they are in fact very flexible and can easily be made publication quality.</p>
-<h2 id="scatter-plot">Scatter plot</h2>
-<p>The simplest plot available in base <em>R</em> graphing is the scatter plot.
-This is created using the command:</p>
-<p><code>&gt; plot(has_age$Age, has_age$Fare)</code></p>
-<p>This command will create the plot below (showing pretty much no coirrelation).</p>
-<p><img alt="" src="../images/basic-scatter-initial.png" /></p>
-<p>There are many options to alter the appearance of the graph that can be passed to the <code>plot</code> function.
-Some of the most common are:</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col</td>
-<td>Colour</td>
-</tr>
-<tr>
-<td>lwd</td>
-<td>Line width</td>
-</tr>
-<tr>
-<td>xlab</td>
-<td>X-axis label</td>
-</tr>
-<tr>
-<td>ylab</td>
-<td>Y-axis label</td>
-</tr>
-<tr>
-<td>main</td>
-<td>Main plot title</td>
-</tr>
-</tbody>
-</table>
-<p>The help for <code>plot</code> (found using <code>?plot</code>) is less straight forward than usual.
-More helpful information on these parameters is available in the <em>par</em> and <em>plot.default</em> help files.</p>
-<p>Here is an example of how to improve the graph appearance:</p>
-<pre><code>plot(has_age$Age, has_age$Fare,
-     col = 'red',
-     lwd = 2,
-     xlab = 'Age',
-     ylab = 'Fare',
-     main = 'Fare vs Age on the Titanic'
-     )
-</code></pre>
-
-<p><img alt="" src="../images/basic-scatter-update.png" /></p>
-<h3 id="challenge">Challenge</h3>
-<p>Look up the functions <code>lm</code> and <code>abline</code> in the help and see if you can add a regression line to the plot to get something like this:</p>
-<p><img alt="" src="../images/basic-scatter-final.png" /></p>
-<p>Now we can be even more certain there is not trend ;)</p>
-<p><a href="../example-scripts/basic_scatter.R">Example answer</a></p>
-<h2 id="histogram">Histogram</h2>
-<p>Another plot that base graphics can produce simply is the histogram.
-This is created using the <code>hist</code> command:</p>
-<p><code>&gt; hist(has_age$Age, xlab ='Age')</code></p>
-<p><img alt="" src="../images/basic-histogram.png" /></p>
-<h2 id="box-plot">Box plot</h2>
-<p>An example of a slightly more complicated graph available in base graphing is the box plot.</p>
-<p><code>&gt; boxplot(has_age$Fare ~ has_age$Survived, xlab='Survived?', ylab='Fare')</code></p>
-<p><img alt="" src="../images/basic-boxplot.png" /></p>
+                <h1 id="_1"></h1>
+<h2 id="_2"></h2>
+<h2 id="_3"></h2>
               
             </div>
           </div>
@@ -216,10 +135,8 @@ This is created using the <code>hist</code> command:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../advanced_graphing/" class="btn btn-neutral float-right" title="Advanced Graphing I">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../scripting/" class="btn btn-neutral" title="Scripting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../advanced_graphing/" class="btn btn-neutral" title="Advanced Graphing I"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -249,10 +166,8 @@ This is created using the <code>hist</code> command:</p>
           <a href="https://github.com/dww100/nc3rs-r-tutorial" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../scripting/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../advanced_graphing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../advanced_graphing/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
