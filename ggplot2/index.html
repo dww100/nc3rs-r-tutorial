@@ -99,6 +99,8 @@
         
             <li><a class="toctree-l3" href="#histogram">Histogram</a></li>
         
+            <li><a class="toctree-l3" href="#saving-images">Saving images</a></li>
+        
         </ul>
     
 
@@ -232,7 +234,19 @@ Here we use the fill to show the breakdown of the histogram by gender.</p>
 </code></pre>
 
 <p><img alt="" src="../images/ggplot2_hist.png" /></p>
-<p>Next we will see how to make more complex plots.</p>
+<h2 id="saving-images">Saving images</h2>
+<p>The standard <em>ggplot2</em> method for saving images is to use the <code>ggsave</code> command. 
+It defaults to saving the last <em>ggplot</em> created.
+The command autodetects the filetype to use.
+Hence the command below creates a PNG format image file.</p>
+<pre><code>ggsave(file = 'test-histogram.png')
+</code></pre>
+
+<p>To find out about all of the options available using <code>ggsave</code> (including how to save plots other than the last created) investigate the help using <code>?ggsave</code>.</p>
+<p>You can also export files from the <em>R Studio</em> GUI.
+To do this go to the tab containing the plot.
+Select <strong>Export</strong> and then <em>Save as Image...</em> or <em>Save as PDF...</em>.</p>
+<p>In the next section we will learn how to make more complex plots using <em>ggplot2</em>.</p>
               
             </div>
           </div>
