@@ -108,6 +108,6 @@ To find out about all of the options available using `ggsave` (including how to 
 
 You can also export files from the *R Studio* GUI.
 To do this go to the tab containing the plot.
-Select **Export** and then *Save as Image...* or *Save as PDF...*.
+Select the *Export* button and then *Save as Image...* or *Save as PDF...*.
 
 In the next section we will learn how to make more complex plots using *ggplot2*.
