@@ -152,7 +152,7 @@
         },
         {
             "location": "/getting_help/",
-            "text": "How to get help\n\n\nNow you have a flavour of what \nR\n can do for you.\nHowever, there will be many things that this tutorial hasn't and won't cover.\n\nR\n has a great community and excellent documentation is part of that.\nHave a quick look at at few of these sources before you move on to see some fancy graphing with the \nggplot2\n package.\n\n\nUseful links\n\n\n\n\nHelp function (\n?command\n or \nhelp(command)\n)\n\n\n\n\nVignettes & Demos\n\n\n\n\nTry the commands \ndemo()\n and \nvignette()\n to get lists of those available\n\n\n\n\n\n\n\n\nGoogle \n\n\n\n\nStack Overflow\n\n\nR Studio Cheatsheets\n\n\nsearch.r-project.org\n\n\nR Bloggers\n\n\nR Seek\n\n\n\n\nTutorials\n\n\n\n\nNIH - Introduction to R for Non-programmers\n\n\nSoftware Carpentry\n\n\nJim Tyson - First course in R\n\n\nAltaf Ali - Data Visualization in R with ggplot2\n\n\nHarvard University - Introduction to R Graphics with ggplot2\n\n\nTutorials Point\n\n\n\n\nBooks\n\n\n\n\n\"R for Data Science\", Garrett Grolemund & Hadley Wickham,\n\nhttp://r4ds.had.co.nz/)\n\n\nphysical copy on Amazon\n\n\n\"Learning R: A Step-by-Step Function Guide to Data Analysis\", Richard Cotton,\n\nAmazon\n\n\n\"R in a Nutshell: A Desktop Quick Reference (In a Nutshell)\", Joseph Adler,\n\nAmazon",
+            "text": "How to get help\n\n\nNow you have a flavour of what \nR\n can do for you.\nHowever, there will be many things that this tutorial hasn't and won't cover.\n\nR\n has a great community and excellent documentation is part of that.\nHave a quick look at at few of these sources before you move on to see some fancy graphing with the \nggplot2\n package.\n\n\nUseful links\n\n\n\n\nHelp function (\n?command\n or \nhelp(command)\n)\n\n\nVignettes & Demos\n\n\nTry the commands \ndemo()\n and \nvignette()\n to get lists of those available\n\n\n\n\n\n\nGoogle \n\n\nStack Overflow\n\n\nR Studio Cheatsheets\n\n\nsearch.r-project.org\n\n\nR Bloggers\n\n\nR Seek\n\n\n\n\nTutorials\n\n\n\n\nNIH - Introduction to R for Non-programmers\n\n\nSoftware Carpentry\n\n\nJim Tyson - First course in R\n\n\nAltaf Ali - Data Visualization in R with ggplot2\n\n\nHarvard University - Introduction to R Graphics with ggplot2\n\n\nTutorials Point\n\n\n\n\nBooks\n\n\n\n\n\"R for Data Science\", Garrett Grolemund & Hadley Wickham,\n\nhttp://r4ds.had.co.nz/)\n\n\nphysical copy on Amazon\n\n\n\"Learning R: A Step-by-Step Function Guide to Data Analysis\", Richard Cotton,\n\nAmazon\n\n\n\"R in a Nutshell: A Desktop Quick Reference (In a Nutshell)\", Joseph Adler,\n\nAmazon",
             "title": "Getting help"
         },
         {
@@ -162,7 +162,7 @@
         },
         {
             "location": "/getting_help/#useful-links",
-            "text": "Help function ( ?command  or  help(command) )   Vignettes & Demos   Try the commands  demo()  and  vignette()  to get lists of those available     Google    Stack Overflow  R Studio Cheatsheets  search.r-project.org  R Bloggers  R Seek",
+            "text": "Help function ( ?command  or  help(command) )  Vignettes & Demos  Try the commands  demo()  and  vignette()  to get lists of those available    Google   Stack Overflow  R Studio Cheatsheets  search.r-project.org  R Bloggers  R Seek",
             "title": "Useful links"
         },
         {
