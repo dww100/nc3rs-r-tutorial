@@ -8,7 +8,8 @@ Have a quick look at at few of these sources before you move on to see some fanc
 ## Useful links
 
 * Help function (`?command` or `help(command)`)
-* Vignettes - usually linked in package help
+* Vignettes & Demos
+  -  Try the commands `demo()` and `vignette()` to get lists of thos available
 * Google 
 * [Stack Overflow](https://stackoverflow.com/documentation/r/topics)
 * [R Studio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
