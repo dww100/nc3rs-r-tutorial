@@ -93,4 +93,21 @@ Here we use the fill to show the breakdown of the histogram by gender.
 
 ![](images/ggplot2_hist.png)
 
-Next we will see how to make more complex plots.
+## Saving images
+
+The standard *ggplot2* method for saving images is to use the `ggsave` command. 
+It defaults to saving the last *ggplot* created.
+The command autodetects the filetype to use.
+Hence the command below creates a PNG format image file.
+
+```
+ggsave(file = 'test-histogram.png')
+```
+
+To find out about all of the options available using `ggsave` (including how to save plots other than the last created) investigate the help using `?ggsave`.
+
+You can also export files from the *R Studio* GUI.
+To do this go to the tab containing the plot.
+Select **Export** and then *Save as Image...* or *Save as PDF...*.
+
+In the next section we will learn how to make more complex plots using *ggplot2*.
