@@ -57,7 +57,7 @@ The `names` command lists all of the columns in the data:
 
 A quick overview of the data can be obtained using `summary`:
 
-`> summary(trains)`
+`> summary(train)`
 
 ![Summary of Titanic Kaggle training dataset](images/titanic-train-summary.png)
 
